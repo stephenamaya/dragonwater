@@ -1,0 +1,84 @@
+/* DARK BLUE BACKGROUND COLOR  */
+html {
+  height:100%;
+  background-color: #233342;
+  background-image: linear-gradient(#233342, #13202d);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4b2b31;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-family: 'Capriola', sans-serif;
+  display: block;
+  color: #e9aa8f;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: 0.6s;
+}
+
+a:hover  {
+  background-color: #6f3637;
+}
+
+h1{
+font-family: 'Heebo', sans-serif;
+
+text-align: center;
+color: #e9aa8f;
+letter-spacing: 1.2em;
+}
+
+p{
+font-family: 'Heebo', sans-serif;
+font-weight: 200;
+text-align: center;
+color: #e9aa8f;
+font-size: 1.1em;
+letter-spacing:0.1em;
+}
+
+.welcome{
+  font-weight:300;
+    -webkit-animation: color-change 5s forwards;
+    -moz-animation: color-change 5s forwards;
+    -o-animation: color-change 5s forwards;
+    -ms-animation: color-change 5s forwards;
+    animation: color-change 5s forwards;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: #233342; }
+ 100% { color: #e9aa8f; }
+
+}
+@-moz-keyframes color-change {
+  0% { color: #233342; }
+ 100% { color: #e9aa8f; }
+
+}
+@-ms-keyframes color-change {
+  0% { color: #233342 }
+ 100% { color: #e9aa8f; }
+
+}
+@-o-keyframes color-change {
+  0% { color: #233342; }
+ 100% { color: #e9aa8f; }
+
+}
+@keyframes color-change {
+  0% { color: #233342; }
+ 100% { color: #e9aa8f; }
+}
