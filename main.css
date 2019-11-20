@@ -2,7 +2,6 @@
 html {
   height:100%;
   background-color: #233342;
-  background-image: linear-gradient(#233342, #13202d);
 }
 
 ul {
@@ -34,7 +33,6 @@ a:hover  {
 
 h1{
 font-family: 'Heebo', sans-serif;
-
 text-align: center;
 color: #e9aa8f;
 letter-spacing: 1.2em;
@@ -48,6 +46,8 @@ color: #e9aa8f;
 font-size: 1.1em;
 letter-spacing:0.1em;
 }
+
+/* ANIMATIONS  */
 
 .welcome{
   font-weight:300;
@@ -81,4 +81,52 @@ letter-spacing:0.1em;
 @keyframes color-change {
   0% { color: #233342; }
  100% { color: #e9aa8f; }
+}
+
+h3{
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+  color: #e9aa8f;
+  letter-spacing:0.1em;
+}
+
+
+/* GRID FOR 3 STORE ITEMS  */
+.storegrid {
+display : grid;
+grid-template-columns : 1fr 1fr 1fr;
+align-items : center;
+margin-left : 20%;
+margin-right : 20%;
+}
+
+.watercan {
+width : 100%;
+transition : transform 0.5s;
+
+}
+
+.watercan:hover {
+transform : scale(1.1);
+}
+
+
+/* FOR SMALL SCREENS  */
+
+@media screen and (max-width: 800px) {
+
+  .storegrid {
+  grid-template-columns : 1fr ;
+  }
+
+  .watercan {
+  margin-top: 1.5em;
+  }
+
+
+
+
+
+
+
 }
