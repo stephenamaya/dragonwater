@@ -2,6 +2,10 @@
 html {
   height:100%;
   background-color: #233342;
+/*  background-image: url(img/water.png);
+  animation: water 15s infinite;
+  background-repeat: repeat-x;*/
+
 }
 
 ul {
@@ -94,6 +98,14 @@ letter-spacing:0.1em;
  100% { color: #e9aa8f; }
 }
 
+@keyframes  water {
+  from{
+    background-position: left 0 bottom 100;
+  }
+  to{
+    background-position: left 1000px bottom 100;
+  }
+}
 h3{
   font-family: 'Heebo', sans-serif;
   text-align: center;

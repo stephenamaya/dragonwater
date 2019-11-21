@@ -14,7 +14,7 @@
           <div class="grid-item">
             <img src="img/bob.jpg" alt="bob" class="img-about">
             <h3>Bob Traichovsoki</h3>
-            <p>I love water in cans because you can recylce them into guns.</p>
+            <p>I love water in cans because you can recycle them into guns.</p>
             <h3>HR Manager</h3>
           </div>
 
