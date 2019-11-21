@@ -155,6 +155,31 @@ transform : scale(1.1);
 .img-about:hover {
   animation: shake 0.5s;
 }
+
+
+input[type=text],[type=email],[type=password],[type=tel],[type=number], select {
+  width: 30%;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+padding : 10px 30px;
+background : #e9aa8f;
+border : none 0;
+cursor : pointer;
+font-size : 20px;
+border-radius : 0;
+color : #233342;
+}
+
+
+
+
+
+
 /* FOR SMALL SCREENS  */
 
 @media screen and (max-width: 800px) {
@@ -175,6 +200,9 @@ transform : scale(1.1);
     margin-bottom:20%;
   }
 
+  input[type=text],[type=email],[type=password],[type=tel],[type=number], select {
+    width: 50%;
+  }
 
 
 
