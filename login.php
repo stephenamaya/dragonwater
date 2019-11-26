@@ -12,7 +12,7 @@ if(!isset($_SESSION['username'])):
   if(isset($_POST['submit'])){
 
     $user = mysqli_real_escape_string($con, $_POST["username"]);
-    $password = mysqli_real_escape_string($con, /*sha1*/($_POST["password"]));
+    $password = mysqli_real_escape_string($con, sha1($_POST["password"]));
     echo $user.$password;
     $result = mysqli_query($con, 'SELECT * FROM users WHERE username="'.$user.'" and password="'.$password.'"') or die ("could not connect to mysql");
     if(mysqli_num_rows($result)==1){
