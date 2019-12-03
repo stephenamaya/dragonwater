@@ -4,8 +4,11 @@
   LOG IN
 </h1>
 
-
-<br><br><br>
+<?php
+  for($i=0;$i<4;$i++){
+    echo '<br>';
+  }
+ ?>
 
 <?php
 if(!isset($_SESSION['username'])):

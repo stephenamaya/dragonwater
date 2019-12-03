@@ -6,7 +6,7 @@
 <?php
 if(isset($_POST['submit'])){
   $user = mysqli_real_escape_string($con, $_POST["username"]);
-  $password = mysqli_real_escape_string($con, sha1($_POST["password"]));
+  $password = mysqli_real_escape_string($con, ($_POST["password"]));
   $age = mysqli_real_escape_string($con, $_POST["age"]);
 
 
@@ -15,14 +15,15 @@ if(isset($_POST['submit'])){
 
   if (mysqli_num_rows($result) == 1){	//If at least one result
     $nameError = "Username already exists!";
-  }if(!$user){
+  }elseif(!$user){
     $nameError = "Enter a username!";
-  }if (!$password){
+  }elseif(!$password){
     $passwordError = "Enter a password!";
-  }if (strlen($age) >= 3){
-    $nameError = "Enter a valid age!";
+  }elseif(strlen($age) >= 3){
+    $ageError = "Enter a valid age!";
   }else{
     //If new account
+    $password = sha1($password);
     $sql = "INSERT INTO users (username,password,age) VALUES('$user','$password','$age')"; //prepare to add stats to database table
     mysqli_query($con, $sql) or die ("could not connect to mysql"); //run the query
     echo "Account successfully created. Log in to get started! You will be redirected to the login page in 5 seconds.";
