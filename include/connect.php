@@ -1,7 +1,7 @@
 <?php
 	$username = "root";
 	$password = "root";
-
+	//
   // $password = "";
 	$database = "dragonwater";
 

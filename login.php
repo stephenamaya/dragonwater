@@ -30,7 +30,7 @@ if(!isset($_SESSION['username'])):
 
 ?>
 <form action="" method = "POST">
-<p><input type="text" placeholder="Your username" name = "username"></p>
+<p><input type="text" placeholder="Your username" name = "username" minlength="3"></p>
 <p><input type="password" placeholder="Your password" name = "password"></p>
 <p><input type="submit" name = "submit" value="Login!" ></p>
 </form>
