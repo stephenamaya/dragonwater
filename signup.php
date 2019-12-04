@@ -15,13 +15,16 @@ if(isset($_POST['submit'])){
 
   if (mysqli_num_rows($result) == 1){	//If at least one result
     $nameError = "Username already exists!";
-  }elseif(!$user){
+  }if(!$user){
     $nameError = "Enter a username!";
-  }elseif(!$password){
+  }if(!$password){
     $passwordError = "Enter a password!";
-  }elseif(strlen($age) >= 3){
+  }if(strlen($age) >= 3){
+    $ageError = "Enter a valid age!";
+  }if(!$age){
     $ageError = "Enter a valid age!";
   }else{
+
     //If new account
     $password = sha1($password);
     $sql = "INSERT INTO users (username,password,age) VALUES('$user','$password','$age')"; //prepare to add stats to database table
@@ -45,10 +48,10 @@ if(isset($_POST['submit'])){
 <p>Fill in the fields to create an account.</p><br>
 <form action="" method = "POST">
 <p><input type="text" placeholder="Create a username" name = "username"></p>
-<span class="error"><?php echo $nameError;?></span>
+<p class="error"><?php echo $nameError;?></p>
 <p><input type="password" placeholder="Create a password" name = "password"></p>
-<span class="error"><?php echo $passwordError;?></span>
+<p class="error"><?php echo $passwordError;?></p>
 <p><input type="text" placeholder="Enter your age" name = "age"></p>
-<span class="error"><?php echo $passwordError;?></span>
+<p class="error"><?php echo $ageError;?></p>
 <p><input type="submit" name = "submit" value="Create!" ></p>
 </form>
