@@ -59,3 +59,4 @@ if(isset($_POST['submit'])){
 <p class="error"><?php echo $ageError;?></p>
 <p><input type="submit" name = "submit" value="Create!" ></p>
 </form>
+<?php include "include/footer.php";?>

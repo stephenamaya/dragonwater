@@ -160,6 +160,8 @@ transform : scale(1.1);
   height: auto;
   border-radius: 50%;
 }
+
+
 .img-about:hover {
   animation: shake 0.5s;
 }

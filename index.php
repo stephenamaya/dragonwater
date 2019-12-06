@@ -47,3 +47,5 @@ function carousel() {
   setTimeout(carousel, 2000);
 }
 </script>
+
+<?php include "include/footer.php";?>
