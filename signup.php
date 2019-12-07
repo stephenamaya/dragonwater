@@ -33,9 +33,9 @@ if(isset($_POST['submit'])){
     $password = sha1($password);
     $sql = "INSERT INTO users (username,password,age) VALUES('$user','$password','$age')"; //prepare to add stats to database table
     mysqli_query($con, $sql) or die ("could not connect to mysql"); //run the query
-    echo "Account successfully created. Log in to get started! You will be redirected to the login page in 5 seconds.";
+    echo "<h3>Account successfully created. Enjoy our members exclusive flavors!</h3>";
     $_SESSION['username'] = $user;
-    header("Refresh: 3; url=index.php"); //Takes user to login page in 3 secs
+     header( "refresh:5;url=store.php" ); //Takes user to loggedin in 3 secs
   }
 }
 ?>
