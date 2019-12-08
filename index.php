@@ -32,7 +32,7 @@
 </div>
 </body>
 <script>
-var myIndex = 0;
+var index = 0;
 carousel();
 
 function carousel() {
@@ -41,9 +41,12 @@ function carousel() {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
+  index++;
+
+  if(index > x.length) {
+    index = 1;
+  }
+  x[index-1].style.display = "block";
   setTimeout(carousel, 2000);
 }
 </script>

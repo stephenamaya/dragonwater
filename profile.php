@@ -1,5 +1,6 @@
-<?php include "include/header.php";?>
-
+<?php include "include/header.php";
+if(isset($_SESSION['username'])):
+  ?>
 <h1 class ="welcome">  Account  </h1>
 
 <div class="grid-profile">
@@ -17,6 +18,9 @@
           </div>
 
 </div>
+<?php else:
+header('Location: index.php');
+endif;?>
 
 <?php include "include/footer.php";?>
 </body>
