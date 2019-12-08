@@ -22,6 +22,7 @@ require "include/connect.php";
     <li><a href="login.php">Login</a></li>
     <li style="float:right"><a href="signup.php">Sign up</a></li>
     <?php else:?>
+    <li><a href="profile.php">Profile</a></li>
     <li style="float:right"><a href="logout.php">Logout</a></li>
     <?php endif; ?>
 
