@@ -20,7 +20,7 @@ if(!isset($_SESSION['username'])):
     $result = mysqli_query($con, 'SELECT * FROM users WHERE username="'.$user.'" and password="'.$password.'"') or die ("could not connect to mysql");
     if(mysqli_num_rows($result)==1){
       $_SESSION['username'] = $user;
-      header('Location: index.php');
+      header('Location: profile.php');
     }
     else {
       echo "<script type='text/javascript'>alert('Incorrect username or password');</script>";
